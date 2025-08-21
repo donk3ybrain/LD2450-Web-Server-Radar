@@ -12,3 +12,5 @@ G to G
 5v to 5v
 17 to TX
 16 to RX
+
+<img width="875" height="643" alt="example " src="https://github.com/user-attachments/assets/3df6b185-d6d3-4357-a8af-15009c12b9c2" />
