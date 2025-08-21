@@ -7,6 +7,7 @@ ESP32-S3 with 5V Out
 Tested on WeAct S3 Mini H4R2
 
 Connect ESP32-S3 to HLK-LD2450:
+
 G to G
 5v to 5v
 17 to TX
