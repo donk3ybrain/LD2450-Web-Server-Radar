@@ -3,13 +3,13 @@ Created by donk3ybrain - 2025 - https://github.com/donk3ybrain/LD2450-Web-Server
 
 Arduino IDE 1.8.19
 ESP32 v3.0.7 Board Files
-For ESP32-S3 with 5V Out
+For ESP32-S3 with 5V Out (tested on WeAct S3 Mini)
 
-Connect ESP32-S3 to HLK-LD2450:
-G to G
-5v to 5v
-17 to TX
-16 to RX
+ESP32-S3  to  HLK-LD2450:
+G         ->   G
+5v        ->   5v
+17        ->   TX
+16        ->   RX
 */
 
 #include <Arduino.h>
@@ -22,7 +22,7 @@ G to G
 //── Serial1 configuration ──────────────────────────────────────────────────────
 #define SERIAL1_RX_PIN  17
 #define SERIAL1_TX_PIN  16
-#define BAUD_RATE       115200
+#define BAUD_RATE       256000
 
 //── Wifi Config ──────────────────────────────────────────────────────
 const char* ssid     = "myRadar";
@@ -515,4 +515,5 @@ void statusTask(void *pv) {
     );
   }
 }
+
 
