@@ -5,6 +5,8 @@ Arduino IDE 1.8.19
 ESP32 v3.0.7 Board Files
 For ESP32-S3 with 5V Out (tested on WeAct S3 Mini)
 
+Requires ESPAsyncWebServer and AsyncTCP libraries
+
 ESP32-S3  to  HLK-LD2450:
 G         ->   G
 5v        ->   5v
@@ -24,7 +26,7 @@ G         ->   G
 #define SERIAL1_TX_PIN  16
 #define BAUD_RATE       256000
 
-//── Wifi Config ──────────────────────────────────────────────────────
+//── Wifi Config ────────────────────────────────────────────────────────────────
 const char* ssid     = "myRadar";
 const char* password = "myPassword!";
 IPAddress local_ip(10,9,8,1);
@@ -86,7 +88,7 @@ void parseFramesTask(void*);
 void statusTask(void*);
 void processFrame(const uint8_t *);
 
-//── WebSocket Event handling ───────────────────────────────────────────────────
+//── WebSocket Event handling ──────────────────────────────────────────────────
 void onWebSocketEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len) {
   if (type == WS_EVT_CONNECT) {
     Serial.printf("WebSocket client #%u connected from %s\n", client->id(), client->remoteIP().toString().c_str());
@@ -95,7 +97,7 @@ void onWebSocketEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsE
   }
 }
 
-//── HTML page ──────────────────────────────────────────────────────
+//── HTML page ─────────────────────────────────────────────────────────────────
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
 <html>
@@ -205,7 +207,7 @@ const char index_html[] PROGMEM = R"rawliteral(
     }
   }
 
-  // ————— Draw arc-labels always upright —————
+  // ————— Draw arc-labels —————
   function drawArcLabels() {
     ctx.fillStyle    = 'rgba(3,194,252,0.95)';
     ctx.font         = '11px Arial';
@@ -227,7 +229,7 @@ const char index_html[] PROGMEM = R"rawliteral(
     }
   }
 
-  // ————— Draw a single target dot —————
+  // ————— Draw a target dot —————
   function drawTarget(tar) {
     const color = tar.t===1 ? 'orangered'
                 : tar.t===2 ? 'yellow'
@@ -303,7 +305,6 @@ const char index_html[] PROGMEM = R"rawliteral(
     requestAnimationFrame(step);
   };
 
-  // ————— Kickoff —————
   drawGridShapes();
   renderFrame(1);
 
@@ -314,7 +315,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 
 //── Setup ─────────────────────────────────────────────────────────────────────
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(256000);
   Serial1.begin(BAUD_RATE, SERIAL_8N1, SERIAL1_RX_PIN, SERIAL1_TX_PIN);
 
   delay(100);
@@ -345,13 +346,14 @@ void setup() {
   );
 }
 
-//── Loop does nothing; tasks handle all work ──────────────────────────────────
+//── Loop  ────────────────────────────────────────────────────────────────────
 void loop() {
+  //── Remove old clients 
   ws.cleanupClients();
   vTaskDelay(1000 / portTICK_PERIOD_MS);
 }
 
-//── Task: Read one byte at a time under lock ──────────────────────────────────
+//── Task: Read one byte at a time under lock ─────────────────────────────────
 void readSerialTask(void *pv) {
   (void)pv;
   for (;;) {
@@ -515,5 +517,6 @@ void statusTask(void *pv) {
     );
   }
 }
+
 
 
