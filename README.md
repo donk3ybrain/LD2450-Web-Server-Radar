@@ -5,9 +5,9 @@ Arduino IDE 1.8.19<br>
 ESP32 v3.0.7 board files<br>
 ESP32-S3 with 5V Out (tested on WeAct S3 Mini H4R2)<br>
 <br>
-Connect ESP32-S3 to HLK-LD2450:<br>
+ESP32-S3 to HLK-LD2450:<br>
 <br>
-G to G<r>
+G  to G<br>
 5v to 5v<br>
 17 to TX<br>
 16 to RX<br>
