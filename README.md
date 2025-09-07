@@ -1,6 +1,6 @@
 # LD2450-Web-Server-Radar
-Example code for displaying LD2450 radar targets in a web browser
-
+Example code for displaying LD2450 radar targets in a web browser<br>
+<br>
 Arduino IDE 1.8.19
 ESP32 v3.0.7 Board Files
 ESP32-S3 with 5V Out
