@@ -1,16 +1,16 @@
 # LD2450-Web-Server-Radar
-Example code for displaying LD2450 radar targets in a web browser<br>
+Example code for displaying up to three real-time HLK-LD2450 radar targets in a web browser.<br>
 <br>
-Arduino IDE 1.8.19
-ESP32 v3.0.7 Board Files
-ESP32-S3 with 5V Out
-Tested on WeAct S3 Mini H4R2
-
-Connect ESP32-S3 to HLK-LD2450:
-
-G to G
-5v to 5v
-17 to TX
-16 to RX
+Arduino IDE 1.8.19<br>
+ESP32 v3.0.7 board files<br>
+ESP32-S3 with 5V Out (tested on WeAct S3 Mini H4R2)<br>
+<br>
+Connect ESP32-S3 to HLK-LD2450:<br>
+<br>
+G to G<r>
+5v to 5v<br>
+17 to TX<br>
+16 to RX<br>
+<br>
 
 <img width="875" height="643" alt="example " src="https://github.com/user-attachments/assets/3df6b185-d6d3-4357-a8af-15009c12b9c2" />
