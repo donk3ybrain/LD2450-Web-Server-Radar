@@ -1,7 +1,7 @@
 # ESP32S3 HLK-LD2450 Web Server Radar
 Example code for displaying up to three real-time HLK-LD2450 radar targets in a web browser.<br>
 <br>
-<H1>Build Environment:</H1><br>
+<H2>Build Environment:</H2><br>
 <br>
 Arduino IDE 1.8.19:<br>
 https://downloads.arduino.cc/arduino-1.8.19-windows.zip<br>
@@ -12,7 +12,7 @@ https://github.com/espressif/arduino-esp32/releases/tag/3.0.7<br>
 ESP32-S3 with 5V Out (tested on WeAct S3 Mini H4R2): <br>
 https://www.aliexpress.us/item/3256805991331946.html<br>
 <br>
-Dependencies:<br>
+<H2>Dependencies:</H2><br>
 <br>
 https://github.com/ESP32Async/ESPAsyncWebServer<br>
 https://github.com/ESP32Async/AsyncTCP<br>
