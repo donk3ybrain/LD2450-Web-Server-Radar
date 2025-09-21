@@ -1,4 +1,4 @@
-# LD2450-Web-Server-Radar
+# ESP32S3-LD2450-Web-Server-Radar
 Example code for displaying up to three real-time HLK-LD2450 radar targets in a web browser.<br>
 <br>
 Arduino IDE 1.8.19<br>
