@@ -26,8 +26,8 @@ G  to G<br>
 <br>
 <H3>Usage:</H3><br>
 1. Connect to Wifi AP<br>
-&nbsp;&nbsp;SSID: myRadar<br>
-&nbsp;&nbsp;Pass: myPassword!<br>
+&nbsp;&nbsp;&nbsp;&nbsp;SSID: &nbsp; &nbsp;myRadar<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Pass: &nbsp; &nbsp;myPassword!<br>
 2. Visit 10.9.8.1 in web browser<br>
 3. (*Optional) Click the arrow in the upper-right to rotate display<br>
 <br>
