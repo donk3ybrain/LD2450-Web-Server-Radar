@@ -25,11 +25,11 @@ G  to G<br>
 16 to RX<br>
 <br>
 <H3>Usage:</H3><br>
-1. Connect to Wifi AP
-   SSID:     myRadar
-   Password: myPassword!
-2. Visit 10.9.8.1 in web browser
-3. Click the arrow in the upper-right to rotate display
+1. Connect to Wifi AP<br>
+   SSID:     myRadar<br>
+   Password: myPassword!<br>
+2. Visit 10.9.8.1 in web browser<br>
+3. Click the arrow in the upper-right to rotate display<br>
 <br>
 <H3>View:</H3><br>
 <img width="875" height="643" alt="example " src="https://github.com/user-attachments/assets/3df6b185-d6d3-4357-a8af-15009c12b9c2" />
